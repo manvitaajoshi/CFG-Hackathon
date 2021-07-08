@@ -63,18 +63,14 @@ export default function Signup() {
                 <h1>REGISTER</h1><br />
                 {error && <Alert variant="danger">{error}</Alert>}
                 <input type="email" name="" placeholder="Email" ref={emailRef} required />
-                <input type="password" name="" placeholder="Password" ref={passwordRef} required  />
+                <input type="password" name="" placeholder="Password" ref={passwordRef} required />
                 <input type="password" name="" placeholder="Confirm Password" ref={passwordConfirmRef} required />
                 {/* <input type="text" name="" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"
                     placeholder="Date of birth" /> */}
                 <br /><input type="submit" name="" disabled={loading} value="Signup" /><br />
-               
             </form>
-            {/* <div className="w-100 text-center mt-2">
-                Already have an account? <Link to="/login">Log In</Link>
-            </div> */}
             <div className="btn">
-                Already have an account? <Link to="/login" style={{ color: "blue"}}>LOG IN</Link>
+                Already have an account? <Link to="/login" style={{ color: "blue" }}>LOG IN</Link>
             </div>
         </>
     )

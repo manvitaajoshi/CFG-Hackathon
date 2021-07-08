@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory, Redirect } from "react-router-dom"
 
 export default function Login() {
     const emailRef = useRef()
@@ -13,17 +13,14 @@ export default function Login() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-
         try {
             setError("")
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            history.push("/")
-     } //catch {
-        //     setError("Failed to log in.")
-        // }
+            history.push("/home")
+        }
         catch (err) {
-                console.log(err)
+            console.log(err)
         }
         setLoading(false)
     }
@@ -61,10 +58,7 @@ export default function Login() {
                 {error && <Alert variant="danger">{error}</Alert>}
                 <input type="email" name="" placeholder="Email" ref={emailRef} required />
                 <input type="password" name="" placeholder="Password" ref={passwordRef} required />
-                {/* <input type="text" name="" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"
-                    placeholder="Date of birth" /> */}
                 <br /><input type="submit" name="" disabled={loading} value="Login" /><br />
-
             </form>
 
             <div className="btn1">
