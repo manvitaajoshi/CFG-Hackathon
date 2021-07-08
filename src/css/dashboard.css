@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Padauk&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Raleway;
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: black;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 1000;
+  letter-spacing: 25px;
+  /*  Animation decalaration   */
+  animation-name: moveInleft;
+  animation-duration: 3.5s;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 6px;
+
+  animation-name: moveInRight;
+  animation-duration: 3.5s;
+}
+
+@keyframes moveInleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+div.container {
+  font-family: Raleway;
+  font-size: 15px;
+  padding-top: 15px;
+  position: absolute;
+  top: 0 !important;;
+
+}
+.navbar {
+  /* Black background color */
+  background-color: yellow;
+  position: absolute; /* Make it stick/fixed */
+  top: 0px !important; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  z-index: 999 !important;
+  padding-top: 05px;
+  padding-bottom: 20px;
+}
+.pos{
+position: relative;
+left:100%;
+}
+
+.ir{
+  width: 7%;
+  position:absolute;
+  top:10px;
+  left:2% !important;
+
+}
+
+
+div.container a {
+  color: black;
+  text-decoration: none;
+  font: 20px Raleway;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+div.highlightTextOut a {
+  color: black;
+}
+
+div.highlightTextOut a:before {
+  position: absolute;
+  color: black;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  overflow: hidden;
+  content: attr(alt);
+  transition: all 0.3s;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+div.highlightTextOut a:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  width: 1%;
+  height: auto;
+}
+
+.icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.icons {
+  margin: 15px 0 20px 0;
+}
+.icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.icons a {
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+.icons a i {
+  transition: transform 0.3s ease-in-out;
+}
+.icons a:nth-child(1){
+  color: #0077b5 !important;
+  border-color: #b3e6ff;
+}
+.icons a:nth-child(1):hover {
+  background: #0077b5;
+}
+.icons a:nth-child(2) {
+  color: #e1306c !important;
+  border-color: #f5bccf;
+}
+
+.icons a:nth-child(2):hover {
+  background: #e1306c;
+}
+.icons a:nth-child(3) {
+  color: #1877f2 !important;
+  border-color: #b7d4fb;
+}
+.icons a:nth-child(3):hover {
+  background: #1877f2;
+}
+
+.icons a:hover {
+  color: #fff !important;
+  border-color: transparent;
+}
+.icons a:hover i {
+  transform: scale(1.2);
+}
+footer {
+  position: absolute;
+  font-family: "Padauk", sans-serif;
+  font-size: 20px;
+  left:0;
+  top:600px;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  background-color: #f0f0f0;
+  /* color: white;
+  background-color: black; */
+}
+
+.contain {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+.contain:hover {
+color: #6ae46a;
+}
