@@ -10,21 +10,25 @@ import ScriptTag from 'react-script-tag';
 
 
 
+
+
+
+
+
 export default function Dashboard() {
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
     const history = useHistory();
 
 
-
-
-
-
-
     return (
         <>
             <ScriptTag isHydrating={true} type="text/javascript" src="../javascript/dashboard-js.js" />
             <ScriptTag isHydrating={true} type="text/javascript" src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous" />
+
+
+
+
 
             <div className="dashboard-page">
 
@@ -42,11 +46,7 @@ export default function Dashboard() {
                 </div>
 
 
-                {/* <div className="log-out">
-                    <button onClick={() => { handleLogout() }}>
-                        Log Out
-                    </button>
-                </div> */}
+
 
                 <footer>
 
