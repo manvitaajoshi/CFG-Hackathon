@@ -34,44 +34,24 @@ export default function Signup() {
 
     return (
         <>
-            {/* <div className="box">
-                <Card>
-                    <Card.Body>
-                        <h2 className="text-center mb-4">Sign Up</h2>
-                        {error && <Alert variant="danger">{error}</Alert>}
-                        <Form onSubmit={handleSubmit}>
-                            <Form.Group id="email">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control className="input" type="email" ref={emailRef} required />
-                            </Form.Group>
-                            <Form.Group id="password">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" ref={passwordRef} required />
-                            </Form.Group>
-                            <Form.Group id="password-confirm">
-                                <Form.Label>Password Confirmation</Form.Label>
-                                <Form.Control type="password" ref={passwordConfirmRef} required />
-                            </Form.Group>
-                            <Button disabled={loading} className="w-100" type="submit">
-                                Sign Up
-                            </Button>
-                        </Form>
-                    </Card.Body>
-                </Card>
-            </div> */}
+
+            <div className="register">
+            </div>
             <form class="box" onSubmit={handleSubmit}>
                 <h1>REGISTER</h1><br />
                 {error && <Alert variant="danger">{error}</Alert>}
                 <input type="email" name="" placeholder="Email" ref={emailRef} required />
                 <input type="password" name="" placeholder="Password" ref={passwordRef} required />
                 <input type="password" name="" placeholder="Confirm Password" ref={passwordConfirmRef} required />
-                {/* <input type="text" name="" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"
-                    placeholder="Date of birth" /> */}
+
                 <br /><input type="submit" name="" disabled={loading} value="Signup" /><br />
             </form>
+
+
             <div className="btn">
-                Already have an account? <Link to="/login" style={{ color: "blue" }}>LOG IN</Link>
+                <span className="acc">Already have an account?</span> <Link to="/login" style={{ color: "blue" }}>LOG IN</Link>
             </div>
+
         </>
     )
 }

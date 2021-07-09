@@ -6,14 +6,14 @@ export default function Chatbot() {
     return (
         <>
             <button className="btn btn-danger" style={{
-                position: "absolute",
+                position: "fixed",
                 top: "90%",
                 left: "90%"
             }} onClick={() => {
                 setShow(!show)
             }}>
-                <i class="fas fa-question"></i>
-                Support
+                <span>
+                    <i class="fas fa-question"></i></span>
             </button>
 
             {

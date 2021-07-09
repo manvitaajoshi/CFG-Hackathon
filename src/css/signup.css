@@ -1,14 +1,28 @@
 
+.register {
+    height : 100vh ; 
+    background-image: url("https://source.unsplash.com/user/erondu/1600x900");
+    z-index: 1;
+    filter: brightness(0.5);
+}
+
+.login {
+    height : 100vh ; 
+    background-image: url("https://source.unsplash.com/user/erondu/1600x900");
+    z-index: 1;
+    filter: brightness(0.5);
+}
+
  .box{
-    width: 500px;
-    height: 600px;
-    padding: 40px;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 65%;
     transform: translate(-50%, -50%);
     background: white;
     text-align: center;
+    border: 1px solid black;
+    padding: 0px -5px;
+    width: 30%;
     }
     .box h1{
     color: black;
@@ -62,6 +76,11 @@
         position: absolute;
         top: 90%;
         left: 55%;
+        font-size: 30px;
+        color: white;
+    }
+    .acc{
+        color : white ; 
     }
     .btn1{
         position: absolute;
